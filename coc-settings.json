@@ -1,0 +1,44 @@
+{
+	// "clangd.enabled": true,
+
+	"semanticTokensHighlights": false,
+	"clangd.semanticHighlighting": true,
+    "coc.preferences.semanticTokensHighlights": false,
+	"semanticTokens.filetypes": ["*"], // !
+
+	"clangd.arguments": [
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "-j=8",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--pch-storage=memory",
+        "--cross-file-rename",
+        "--enable-config",
+        "--pretty",
+        "--clang-tidy",
+		"--inlay-hints=true", // ??
+		"--semanticTokensHighlights=false",
+	],
+
+
+	"languageserver": {
+  		"clangd": {
+    		"command": "clangd",
+    		// "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+    		"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			
+			"initializationOptions": {
+                "cache": {
+                    "directory": "/tmp"
+                },
+                "highlight": { 
+					"enabled" : true,
+					"lsRanges" : true,
+				},
+            },
+		},
+	}
+
+
+}

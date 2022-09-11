@@ -10,6 +10,8 @@ set backspace=indent,eol,start
 
 " enable for cpp highlight
 let g:lsp_cxx_hl_use_text_props = 1
+let g:lsp_semantic_enabled = 1
+let g:coc_default_semantic_highlight_groups = 1
 
 
 " for test
@@ -23,16 +25,19 @@ nnoremap <C-q> :bp<CR>
 
 " height light
 " class
-let g:cpp_class_scope_highlight = 1
+"let g:cpp_class_scope_highlight = 1
+
 " class function name
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
+"let g:cpp_member_variable_highlight = 1
+"let g:cpp_class_decl_highlight = 1
+
 " posix function
-let g:cpp_posix_standard = 1
+"let g:cpp_posix_standard = 1
+
 "other
-let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-let g:cpp_concepts_highlight = 1
+"let g:cpp_experimental_simple_template_highlight = 1
+"let g:cpp_experimental_template_highlight = 1
+"let g:cpp_concepts_highlight = 1
 
 
 
@@ -200,3 +205,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " ----------my-----------------
 set tagfunc=CocTagFunc
+
